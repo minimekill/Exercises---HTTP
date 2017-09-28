@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TAADAAAAAA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <script>
+
+
+
+
+            function tryURL(url) {
+                fetch(url, {method: "get"})
+                        .then(function (response) {
+                            if (!response.ok) {
+                                throws(error);
+                            }
+                            return response.json();
+                        }).then(function (json) {
+                    alert("GET WORKS " + url);
+                }).catch(function (json) {
+                    alert("GET BROKE " + url);
+
+                });
+
+
+            }
+            tryURL("http://ip.jsontest.com/?alloworigin=true");
+        </script>
+
+    </body>
+</html>
